@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><Zhangirkhan-portfolio></title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="aboutme"><a href="#aboutme">about me</a></li>
+            <li><a href="#activities">my activities/projects</a></li>
+            <li><a href="#contact">contacts</a></li>
+        </ul>
+    </nav>
+    <h1 id="hl" class="hello">Hello, welcome to my potfolio</h1>
+    <section class="me" id="aboutme">
+        <img src="images/me.jpg" alt="me">
+        <div>
+            <h2>about me</h2>
+            <p>My name is Zhangirkhan Gabdulgazizovich. I was born in 2008 and I am now 17 years old. I study in the 11th grade at the Kanysh Satpayev School-Lyceum in Aktobe, Republic of Kazakhstan.</p>
+
+<p>In the future, I plan to study Computer Science with a focus on Web Development. My goal is to develop skills in creating and designing websites, and later to integrate modern web technologies into the field of medicine to support its digitalization and improve efficiency.</p>
+
+<p></p>I am considering pursuing higher education in China or South Korea, where I hope to gain strong knowledge and experience to achieve my professional ambitions.</p>
+        </div>
+    </section>
+    <section id="activities">
+        <div class="activities">
+            <h1 class="ex">Extracurricular activities</h1>
+            <div class="block">
+            <div class="basketball">
+                <div>
+                    <div><p class="bs">basketball</p></div>
+                    <div>
+                    <img class="pic" src="images/8a9de67c-1109-4796-834f-c7126d3f624b.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="chess">
+                                <div>
+                    <div><p class="">chess</p></div>
+                    <div>
+                    <img class="ch" src="images/05858cac-bb8c-4b8e-bc33-0c7b29900912.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="valanteering">
+                                <div>
+                    <div><p class="">valanteering</p></div>
+                    <div>
+                    <img class="ch3" src="images/5782f618-a3c5-41c8-b754-8533260a669d.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="myprojects">
+        <h2 class="fade-up">my  pojects</h2>
+    <div class="block">
+            <div class="basketball">
+                <div>
+                    <div><p class="bs">project 1</p></div>
+                    <div>
+                    <img class="pic" src="images/df5a1899-a2da-419e-8854-a0b63749d246.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+             <div class="chess">
+                                <div>
+                    <div><p class="">project 2</p></div>
+                    <div>
+                    <img class="ch" src="images/d7fe7b7d-33c8-4aad-8d20-5db0c669f944.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="valanteering">
+                                <div>
+                    <div><p class="b">project 3</p></div>
+                    <div>
+                    <img class="ch3" src="images/d7fe7b7d-33c8-4aad-8d20-5db0c669f944.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="project-card">
+            
+        </div>
+    </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>contact me</h2>
+        <form action="#" method="post">
+         <input type="text" name="name" placeholder="your name" required>
+         <input type="text" name="email" placeholder="your email" required>
+         <div class="form-container">
+         <textarea class="mm" name="message" placeholder="your message" required></textarea>
+         
+         </div>
+         <button class="knopka" type="submit">send</button>
+        </form>     
+    </section>
+<!-- Подключаем библиотеку EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function() {
+    emailjs.init("q58iy9-c69ahnZD1x"); // твой Public Key
+})();
+
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_z4ibm8w", "template_w4f55bh", this)
+        .then(function() {
+            alert("Сообщение отправлено!");
+        }, function(error) {
+            console.error("Ошибка:", error);
+            alert("Ошибка: " + JSON.stringify(error));
+        });
+});
+</script>
+
+   
+
+
+</body>
+</html>
